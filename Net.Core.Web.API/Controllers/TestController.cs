@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Net.Core.Web.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

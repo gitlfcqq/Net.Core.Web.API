@@ -1,6 +1,6 @@
 using System;
 
-namespace Net.Core.Web.API
+namespace Net.Core.Web.API.Models
 {
     public class WeatherForecast
     {
