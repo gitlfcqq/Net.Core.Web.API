@@ -52,6 +52,10 @@ namespace Net.Core.Web.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Net.Core.Web.API v1"));
             }
 
+            //配置应用提供静态文件并启用默认文件映射
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
