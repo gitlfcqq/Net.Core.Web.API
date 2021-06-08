@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Net.Core.Web.API.Models;
 
 namespace Net.Core.Web.API.Controllers
@@ -14,10 +14,11 @@ namespace Net.Core.Web.API.Controllers
     public class TodoItemsController : ControllerBase
     {
         private readonly TodoContext _context;
-
-        public TodoItemsController(TodoContext context)
+        private readonly ILogger _logger;
+        public TodoItemsController(TodoContext context, ILogger<TodoItemsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: api/TodoItems
@@ -88,9 +89,11 @@ namespace Net.Core.Web.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {
+            _logger.LogInformation($"Getting item {id}");
             var todoItem = await _context.TodoItems.FindAsync(id);
             if (todoItem == null)
             {
+                _logger.LogWarning($"GetById({id}) NOT FOUND");
                 return NotFound();
             }
 
