@@ -107,4 +107,4 @@ dist
 /Net.Core.Web.API/.vs/Net.Core.Web.API
 /.vs/Net.Core.Web.API/v16
 /.vs/Net.Core.Web.API/config
-/.vs/Net.Core.Web.API/DesignTimeBuild/.dtbcache.v2
+/Net.Core.Web.API/bin/Release/net5.0
