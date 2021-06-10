@@ -108,3 +108,5 @@ dist
 /.vs/Net.Core.Web.API/v16
 /.vs/Net.Core.Web.API/config
 /Net.Core.Web.API/bin/Release/net5.0
+/RazorPagesMovie/obj
+/RazorPagesMovie/bin/Debug/net5.0
