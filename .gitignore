@@ -104,6 +104,7 @@ dist
 .tern-port
 /Net.Core.Web.API/obj
 /Net.Core.Web.API/bin/Debug/net5.0
+/Net.Core.Web.API/.vs
 /Net.Core.Web.API/.vs/Net.Core.Web.API
 /.vs/Net.Core.Web.API/v16
 /.vs/Net.Core.Web.API/config
